@@ -4,6 +4,7 @@ window.onload = function () {
 };
 function updateEduTime() {
   var eduDiv = document.getElementById("eduContainer");
+  var newEduDivCreated = document.createElement("div");
 
   //------------------------------------------------------------
 
@@ -13,7 +14,8 @@ function updateEduTime() {
   newButton.className = "btn btn-primary border-radius mt-5";
 
   newButton.appendChild(newEduText);
-  eduDiv.appendChild(newButton);
+  newEduDivCreated.appendChild(newButton);
+  eduDiv.appendChild(newEduDivCreated);
 
   //------------------------------------------------------------
 
@@ -23,7 +25,8 @@ function updateEduTime() {
   heading.className = "font-weight-bold mt-2";
 
   heading.appendChild(newEduDegree);
-  eduDiv.appendChild(heading);
+  newEduDivCreated.appendChild(heading);
+  eduDiv.appendChild(newEduDivCreated);
 
   //------------------------------------------------------------
 
@@ -32,7 +35,8 @@ function updateEduTime() {
   var subEduInstitute = document.createElement("sub");
 
   subEduInstitute.appendChild(newEduInstitute);
-  eduDiv.appendChild(subEduInstitute);
+  newEduDivCreated.appendChild(subEduInstitute);
+  eduDiv.appendChild(newEduDivCreated);
 
   //------------------------------------------------------------
 
@@ -42,7 +46,8 @@ function updateEduTime() {
   pEduDescription.className = "mt-4";
 
   pEduDescription.appendChild(newEduDescription);
-  eduDiv.appendChild(pEduDescription);
+  newEduDivCreated.appendChild(pEduDescription);
+  eduDiv.appendChild(newEduDivCreated);
 
   //-------------------------------------------------------------------------------------------------------
 
@@ -53,11 +58,12 @@ function updateEduTime() {
   deleteButton.className = "btn btn-danger border-radius mt-1";
   deleteButton.onclick = handleDelete;
 
-  eduDiv.appendChild(deleteButton);
+  newEduDivCreated.appendChild(deleteButton);
+  eduDiv.appendChild(newEduDivCreated);
 }
 
 function handleDelete(e) {
   var tag = e.target;
-  var container = tag.parentNode;
-  container.tag.removeChild();
+  var divCreated = tag.parentNode;
+  divCreated.remove();
 }
