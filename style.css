@@ -37,3 +37,6 @@ sub {
   display: block;
   width: 30%;
 }
+.position-fixed {
+  position: fixed;
+}
