@@ -120,7 +120,7 @@
                   </button>
                 </div>
               </form>
-              <div>
+              <div id="eduBlock">
                 <button class="btn btn-primary border-radius mt-5">
                   2015-2017
                 </button>
@@ -133,12 +133,22 @@
                   Voluptates, consequuntur? Autem maiores, vero soluta animi
                   exercitationem aliquid amet? Veritatis, eligendi?
                 </p>
+                <!-- <button
+                  type="button"
+                  class="btn btn-danger border-radius mt-1"
+                  onclick="eduDelete()"
+                >
+                  Delete
+                </button> -->
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-sm-12 mt-5">
             <h1>Experience</h1>
-            <div class="ml-5 mt-4 d-flex flex-column align-items-start">
+            <div
+              id="expContainer"
+              class="ml-5 mt-4 d-flex flex-column align-items-start"
+            >
               <form>
                 <div class="form-group">
                   <input
@@ -167,7 +177,7 @@
                   />
                   <button
                     id="expSubmit"
-                    type="submit"
+                    type="button"
                     class="border-radius submit-button btn btn-primary mt-4"
                   >
                     Submit
