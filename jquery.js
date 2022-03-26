@@ -3,7 +3,8 @@ $(function () {
   $("#eduSubmit").click(handleEduButtonClick);
   $("#expSubmit").click(handleExpButtonClick);
 
-  $("eduContainer #newEduBlock").on("click", "button.btn-danger", handleDelete);
+  $("#eduContainer").on("click", "button.btn-danger", handleDelete);
+  $("#expContainer").on("click", "button.btn-danger", handleDelete);
 });
 
 function handleEduButtonClick() {
@@ -47,8 +48,13 @@ function handleExpButtonClick() {
    <p class="mt-4">
      ${expDescription}
    </p>
+   <button
+   type="button"
+   class="btn btn-danger border-radius ">
+   Delete
+</button>
   </div>`);
 }
 function handleDelete() {
-  $(this).remove();
+  $(this).parent().remove();
 }
